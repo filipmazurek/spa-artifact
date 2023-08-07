@@ -1,0 +1,13 @@
+Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 22.1.0.0
+gem5 compiled Feb 28 2023 00:05:09
+gem5 started Apr 12 2023 11:01:53
+gem5 executing on rapid-1660.vm.duke.edu, pid 108055
+command line: /home/rapiduser/gem5/build/X86/gem5-moesi.fast -d /home/rapiduser/checkpoints/cores_4/ferret/simsmall /home/rapiduser/gem5/configs/example/fs.py --checkpoint-dir=/home/rapiduser/checkpoints/cores_4/ferret/simsmall --checkpoint-restore=1 --script=/home/rapiduser/checkpoints/cores_4/ferret/simsmall/runscript.rcS --kernel=/home/rapiduser/ubuntu_images/kernel/vmlinux-5.4.49 --disk-image=/home/rapiduser/ubuntu_images/disk/x86-ubuntu-18_04-parsec --num-cpus=4 --mem-size=3GiB
+
+**** REAL SIMULATION ****
+Writing checkpoint
+Exiting @ tick 5823467841000 because m5_exit instruction encountered

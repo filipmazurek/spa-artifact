@@ -1,0 +1,13 @@
+Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 22.1.0.0
+gem5 compiled Feb 28 2023 00:05:09
+gem5 started Apr 10 2023 14:54:47
+gem5 executing on rapid-1660.vm.duke.edu, pid 37917
+command line: /home/rapiduser/gem5/build/X86/gem5-moesi.fast -d /home/rapiduser/checkpoints/hack-back-4-core /home/rapiduser/gem5/configs/example/fs.py --script=/home/rapiduser/checkpoints/hack-back-4-core/hack-back-ckpt.rcS --kernel=/home/rapiduser/ubuntu_images/kernel/vmlinux-5.4.49 --disk-image=/home/rapiduser/ubuntu_images/disk/x86-ubuntu-18_04-parsec --mem-size=3GiB -n 4
+
+**** REAL SIMULATION ****
+Writing checkpoint
+Exiting @ tick 3406084111500 because m5_exit instruction encountered

@@ -1,0 +1,66 @@
+Loading new script...
+[PARSEC] Benchmarks to run:  parsec.ferret
+
+[PARSEC] [========== Running benchmark parsec.ferret [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simsmall'.
+corel/
+corel/__cass.env
+corel/corel.raw
+corel/lsh.lsh
+corel/map_corel.map
+queries/
+queries/acorn.jpg
+queries/air-fighter.jpg
+queries/airplane-2.jpg
+queries/airplane-takeoff-3.jpg
+queries/alcatraz-island-prison.jpg
+queries/american-flag-3.jpg
+queries/apartment.jpg
+queries/apollo-2.jpg
+queries/apollo-earth.jpg
+queries/apple-11.jpg
+queries/apple-14.jpg
+queries/apple-16.jpg
+queries/apple-7.jpg
+queries/aquarium-fish-25.jpg
+queries/arches-9.jpg
+queries/arches.jpg
+[PARSEC] Running 'time /home/gem5/parsec-benchmark/pkgs/apps/ferret/inst/amd64-linux.gcc-hooks/bin/ferret corel lsh queries 10 20 4 output.txt':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20150206
+[HOOKS] PARSEC Hooks Version 1.2
+[HOOKS] Entering ROI
+[HOOKS] M5: taking a checkpoint 
+(7,1)
+(16,2)
+(16,3)
+(16,4)
+(16,5)
+(16,6)
+(16,7)
+(16,8)
+(16,9)
+(16,10)
+(16,11)
+(16,12)
+(16,13)
+(16,14)
+(16,15)
+(16,16)
+[HOOKS] Leaving ROI
+QUERY TIME: 1.218 seconds
+[HOOKS] Terminating
+
+real	0m1.250s
+user	0m3.961s
+sys	0m0.027s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC]
+[PARSEC] BIBLIOGRAPHY
+[PARSEC]
+[PARSEC] [1] Bienia. Benchmarking Modern Multiprocessors. Ph.D. Thesis, 2011.
+[PARSEC]
+[PARSEC] Done.
+Done running script, exiting.

@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/gem5/parsec-benchmark
+source ./env.sh
+parsecmgmt -a run -p ferret -c gcc-hooks -i simmedium -n 4
