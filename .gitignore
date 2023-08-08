@@ -1,6 +1,6 @@
 # Checkpoints which take too much room
 docker-share/checkpoints/parsec-roi-4_core/*
-!docker-share/checkpoints/parsec-roi-4_core/ferret
+!docker-share/checkpoints/parsec-roi-4_core/ferret/simsmall/
 
 # Disk and kernel images
 docker-share/ubuntu-images/disk/x86-ubuntu-18_04-parsec

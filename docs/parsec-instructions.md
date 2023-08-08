@@ -3,6 +3,28 @@
 The following are instructions for how to compile PARSEC to be compatible with gem5. This means setting up the benchmark ROI so that they are the only parts recorded by gem5.
 
 
+## Precompiled PARSEC Benchmarks
+
+`spa-artifact/docker-share/parsec/` is the precompiled version of the PARSEC benchmarks with the gem5 hooks as described in the top-level README. To use gem5 using a disk image which contains these benchmarks:
+
+1. Follow the `Downloads` instructions
+2. Move the x86-parsec.img.gz to `ubuntu-images/`
+```bash
+gzip -d x86-parsec.img.gz
+mv parsec.img x86-ubuntu-18_04-parsec
+```
+3. Mount the image and replace `/home/gem5/parsec-benchmark` with the precompiled copy
+```bash
+mkdir mnt
+sudo mount -o loop,offset=1048576 x86-parsec mnt/
+sudo rm -rf mnt/home/parsec-benchmark
+sudo cp -r path-to/parsec-benchmark mnt/home/parsec-benchmark
+sudo umount mnt/
+```
+
+That's all that's needed. Follow the below directions to recreate this precompiled PARSEC benchmark suite.
+
+
 ## Downloads
 
 Download an x86 Ubuntu disk image with the PARSEC benchmark with ROI code for gem5 from [here](http://dist.gem5.org/dist/v22-1/images/x86/ubuntu-18-04/parsec.img.gz)

@@ -5,6 +5,29 @@ Note: these changes were all done on the v22.1.0.0 tag of gem5.
 Based on [add citation here], can observe pretty good program variability by adding a uniform random distribution of [0, 4] cycles to L2 cache accesses.
 
 
+### First Build
+
+If building on a regular Linux system, use the script `docs/running-parsec-gem5/build-gem5.sh`. For subsequent builds:
+
+```bash
+python 'which scons' build/X86/gem5.fast -j 4 PROTOCOL="MOESI_hammer"
+```
+
+If building on a Slurm system:
+
+```bash
+cd docs/running-parsec-gem5
+conda env create -f slurm-gem5-env.yml
+conda activate gem5_env
+sbatch build-gem5-slurm.sh
+```
+
+For every subsequent build:
+```bash
+cd docs/running-parsec-gem5
+sbatch build-gem5-slurm.sh
+```
+
 ### Classic Caches
 
 Fairly straightforward. All changes done in `gem5/srs/mem/cache/cache.cc`
@@ -59,8 +82,7 @@ Compile gem5 normally. This will ensure that all necessary SLICC compiled .cc fi
 
 This is a slicc compiler specification.
 
-Comment out line 1223 (or in the area. All that matters is that these are the ‘.cc’ files)
-As well as all the files which are ‘.hh.’
+Comment out line 1223 (or in the area. All that matters is that these are the `.cc` files, as well as all the files which are `.hh.`). These lines generate the built `.cc` and `.hh` files.
 
 `gem5/src/mem/slicc/symbols/StateMachine.py`
 ```Python

@@ -38,6 +38,7 @@ conda env create -f environment.yml
 conda activate spa
 ```
 
+
 ### Downloading Ubuntu Image and Kernel
 
 In order to run gem5, it requires a kernel and ubuntu image. Downloading the kernel is easy. We'll need to slightly modify the ubuntu image to replace some files with our own.
@@ -56,6 +57,7 @@ mv parsec.img x86-ubuntu-18_04-parsec
 ```
 
 Next, we will need to mount the image and replace the parsec code with our custom hooks which work with gem5. For the rest of this section, we refer the read `docs/parsec-instructions.md` for more detail.
+
 
 ### gem5 Checkpointing
 
@@ -77,6 +79,7 @@ In order to generate meaningful amounts of data, we ran gem5 on a cluster. Instr
 ## gem5 Executables
 
 We include the pre-compiled gem5 executables. If there is any trouble with them, please refer to `docs/gem5-instructions.md`, especially if it is needed to re-compile them.
+
 
 ### Gettings Data From Experiments
 
@@ -124,6 +127,10 @@ cd shared/python-runners
 python figure-1.py
 ...
 ```
+
+## Reproducing on a Slurm Cluster
+
+Please follow the instructions in `docs/gem5-instructions.md` and `docs/parsec-instructions.md`, and use the included shell scripts in `docs/running-parsec-gem5/`. 
 
 
 ## Repository Contents
