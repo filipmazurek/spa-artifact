@@ -20,13 +20,15 @@ Prerequisite: install Docker.
 
 ```bash
 cd spa-artifact/
-./artifact-bash-scripts/set-up-docker.sh
+bash ./artifact-bash-scripts/set-up-docker.sh
 
-# Here, you should be within the docker container. First, install conda
+# Here, you should be within the docker container. First, install and set up conda with all default options
 cd /shared/
-./artifact-bash-scripts/set-up-conda.sh
-```
+bash ./in-docker-bash-scripts/set-up-conda.sh
 
+eval "$(/root/miniconda3/bin/conda shell.bash hook)"
+conda activate spa
+```
 
 ### Downloading Ubuntu Image and Kernel
 
@@ -35,7 +37,7 @@ In order to run gem5, it requires a kernel and ubuntu image. Downloading the ker
 Download the kernel and image, within the shared directory (either outside or within the Docker container):
 
 ```bash
-./artifact-bash-scripts/download-disk.sh
+bash ./in-docker-bash-scripts/download-disk.sh
 ```
 
 Next, we will need to mount the image and replace the parsec code with our custom hooks which work with gem5.
@@ -48,7 +50,7 @@ In this section, we will copy our precompiled `ferret` binary into the disk imag
 We use `sudo` to mount and dismount the disk image.
 
 ```bash
-sudo ./artifact-bash-scripts/copy-parsec-binaries.sh
+bash ./in-docker-bash-scripts/copy-parsec-binaries.sh
 ```
 
 
@@ -63,6 +65,7 @@ The docker image contains a Python script to run 5 iterations of the PARSEC benc
 
 ```bash
 cd /shared/python-runners/
+
 python meta-runner.py
 ```
 
@@ -93,8 +96,7 @@ To analyze data, we include the experimental data results as CSVs from collectin
 The following Python scripts will generate the data used in the plots as found in the paper. These scripts, along with the CSV data, are duplicated both in the repository and in the Docker container. For ease of use, we recommend directly running them in the Docker container and saving them to a shared directory to view on your local machine. Only figures 1 and 2 only create a plot. The remaining scripts will print to the console in order to directly verify the results without needing to visualize them. Note that the code for figures 6-11 only uses 100 trials for quick results (as opposed to 1000 in the paper). Figure 12 code only averages over 10 random seeds, and will save a figure.
 
 ```bash
-conda activate spa
-cd /shared/python-runners
+cd /shared/paper-figures/
 python figure-1.py
 ...
 python figure-12.py

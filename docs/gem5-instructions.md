@@ -2,7 +2,10 @@
 
 Note: these changes were all done on the v22.1.0.0 tag of gem5.
 
-Based on [add citation here], can observe pretty good program variability by adding a uniform random distribution of [0, 4] cycles to L2 cache accesses.
+```bash
+git clone git@github.com:gem5/gem5.git
+git checkout v22.1.0.0
+```
 
 
 ### First Build
