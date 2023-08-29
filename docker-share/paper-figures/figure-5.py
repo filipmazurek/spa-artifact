@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import bootstrap, norm
 
-from smc.spa_frontend.spa import run_frontend
+from spa.spa_frontend.spa import run_frontend
 
 # Set the default font size
 plt.rcParams['font.size'] = 11.5
@@ -104,4 +104,4 @@ ax.set_title(
 ax.legend()
 
 # Show the plot
-plt.show()
+plt.savefig('paper-figure-5.png')

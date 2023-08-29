@@ -1,0 +1,7 @@
+Import('*')
+
+# SimObject('GlobalVariableCache.py')
+# For Gem5 v21 and newer:
+SimObject('GlobalVariableCache.py', sim_objects=['GlobalVariableCache'])
+
+Source('global_variable_cache.cc')

@@ -1,0 +1,1 @@
+/shared/gem5/src/systemc/utils/sc_trace_file.cc

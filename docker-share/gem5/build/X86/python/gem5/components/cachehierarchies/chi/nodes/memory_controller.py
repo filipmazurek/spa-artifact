@@ -1,0 +1,1 @@
+/shared/gem5/src/python/gem5/components/cachehierarchies/chi/nodes/memory_controller.py

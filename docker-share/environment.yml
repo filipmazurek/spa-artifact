@@ -1,12 +1,14 @@
 name: spa
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - numpy
   - scipy
   - sympy
   - tk
   - pip
+  - matplotlib
   - pip:
       # Local installation
       - -e ./

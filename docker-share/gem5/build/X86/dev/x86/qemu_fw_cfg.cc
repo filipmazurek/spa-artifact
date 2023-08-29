@@ -1,0 +1,1 @@
+/shared/gem5/src/dev/x86/qemu_fw_cfg.cc

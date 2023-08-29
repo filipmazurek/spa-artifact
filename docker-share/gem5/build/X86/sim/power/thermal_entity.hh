@@ -1,0 +1,1 @@
+/shared/gem5/src/sim/power/thermal_entity.hh

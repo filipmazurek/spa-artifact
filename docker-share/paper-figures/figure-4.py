@@ -1,7 +1,7 @@
 import argparse
 import matplotlib.pyplot as plt
 
-from smc.spa_frontend.spa import run_frontend
+from spa.spa_frontend.spa import run_frontend
 
 # Set confidence and proportion
 confidence_level = 0.9
@@ -104,4 +104,4 @@ plt.xticks(speedup_list, rounded_speedup_list)
 legend = plt.legend(loc='center right')
 legend.set_bbox_to_anchor((1.0, 0.75))
 
-plt.show()
+plt.savefig('paper-figure-4.png')

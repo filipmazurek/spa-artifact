@@ -5,8 +5,8 @@ import os
 import random
 from scipy.stats import bootstrap, norm
 
-from smc.util.csv_reader import read_data
-from smc.spa_frontend.spa import run_frontend
+from spa.util.csv_reader import read_data
+from spa.spa_frontend.spa import run_frontend
 
 # Read in all data
 csv_file = "../csv-results/ferret_3mb_tlbwritemiss1k.csv"
@@ -170,4 +170,4 @@ plt.yticks(fontsize=16)
 plt.xlim([0.898, 1.002])
 
 plt.legend(fontsize=16)
-plt.savefig('confidence_vs_range.png', bbox_inches='tight')
+plt.savefig('paper-figure-12.png', bbox_inches='tight')

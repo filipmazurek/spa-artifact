@@ -1,0 +1,20 @@
+OSError: [Errno 28] No space left on device
+
+At:
+  build/X86/python/gem5/resources/downloader.py(489): get_resource
+  build/X86/python/gem5/resources/resource.py(170): __init__
+  configs/example/gem5_library/x86-parsec-benchmarks.py(195): <module>
+  build/X86/python/m5/main.py(597): main
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 22.1.0.0
+gem5 compiled Feb 20 2023 15:48:56
+gem5 started Feb 22 2023 17:53:41
+gem5 executing on dcc-core-303, pid 3462150
+command line: build/X86/gem5.opt configs/example/gem5_library/x86-parsec-benchmarks.py --benchmark ferret --size simsmall
+
+info: Standard input is not a terminal, disabling listeners.
+Resource 'x86-parsec' was not found locally. Downloading to '/hpc/home/fjm7/.cache/gem5/x86-parsec.gz'...
+Finished downloading resource 'x86-parsec'.
+Decompressing resource 'x86-parsec' ('/hpc/home/fjm7/.cache/gem5/x86-parsec.gz')...

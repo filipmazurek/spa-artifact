@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-import smc.util.csv_reader as csv_reader
+import spa.util.csv_reader as csv_reader
 
 # Extract the data from the CSV file
 data_points = csv_reader.read_data('../csv-results/real-machine/real-runtime-ferret.csv')
@@ -30,4 +30,4 @@ ax.set_ylabel('Frequency')
 ax.set_title('Ferret Runtime on Real Machine')
 ax.legend()
 
-plt.show()
+plt.savefig('paper-figure-1.png')

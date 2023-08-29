@@ -2,9 +2,9 @@ import argparse
 import random
 from scipy.stats import bootstrap
 
-from smc.smc_engine.data_generator import *
-from smc.spa_frontend.spa import run_frontend
-from smc.util.csv_reader import read_data
+from spa.smc_engine.data_generator import *
+from spa.spa_frontend.spa import run_frontend
+from spa.util.csv_reader import read_data
 
 # Number of test points to check accuracy
 trials = 100

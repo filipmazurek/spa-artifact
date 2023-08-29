@@ -1,0 +1,1 @@
+/shared/gem5/src/systemc/ext/core/sc_module_name.hh
