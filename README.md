@@ -37,7 +37,7 @@ conda activate spa
 
 To run gem5, it requires a kernel and ubuntu image. Downloading the kernel is easy. We'll need to slightly modify the ubuntu image to replace some files with our own.
 
-Download the kernel and image, within the shared directory (either outside or within the Docker container):
+Download the kernel and image within the shared directory:
 
 ```bash
 cd /shared/
@@ -92,7 +92,7 @@ This will create a CSV which contains the data from the gem5 runs.
 
 ### Analyzing Data
 
-To analyze data, we include the experimental data results as CSVs from collecting gem5 run data. If you plan to run SPA in the Docker container, skip ahead to the section `Reproducing Results`.
+To analyze data, we include the experimental data results as CSVs.
 
 
 ### Reproducing Results
